@@ -1,0 +1,73 @@
+.mail {
+  color: orange;
+}
+
+.mail:hover {
+  text-decoration: underline;
+}
+
+body {
+  height: 100%;
+}
+
+.section:nth-of-type(even) {
+  background-color: var(--colorGray);
+}
+.section_header {
+  position: relative;
+  padding-bottom: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.section_header:before {
+  content: "";
+  width: 5rem;
+  height: 3px;
+  background-color: var(--colorAlternative);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section_title {
+  font-size: 2.4rem;
+}
+.section_title span {
+  color: #007efa;
+}
+.section_hint {
+  font-size: 1.4rem;
+  display: block;
+  margin-top: 0rem;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.section_content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 641px) {
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .section_header {
+    margin-bottom: 1rem;
+  }
+  .section_content {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .section_header {
+    margin-bottom: 3rem;
+  }
+}
